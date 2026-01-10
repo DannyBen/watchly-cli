@@ -1,10 +1,10 @@
 lib = File.expand_path 'lib', __dir__
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include? lib
-require 'watchly/version'
+require 'watchly/cli/version'
 
 Gem::Specification.new do |s|
   s.name        = 'watchly-cli'
-  s.version     = Watchly::VERSION
+  s.version     = Watchly::CLI::VERSION
   s.summary     = 'Lightweight, polling-based file system watcher CLI'
   s.description = [
     'A small polling-based executable that watches one or more glob patterns',
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'colsole', '~> 1.0'
   s.add_dependency 'mister_bin', '~> 0.9'
-  s.add_dependency 'watchly', '~> 0.1.0'
+  s.add_dependency 'watchly', '~> 0.1.1'
 
   s.metadata = {
     'bug_tracker_uri'       => 'https://github.com/dannyben/watchly-cli/issues',

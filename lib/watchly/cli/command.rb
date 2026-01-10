@@ -65,9 +65,9 @@ module Watchly
       end
 
       def show_changes(changes)
-        changes.added.each    { say "gb`+ #{it}`" }
-        changes.modified.each { say "bb`* #{it}`" }
-        changes.removed.each  { say "rb`- #{it}`" }
+        changes.added.each    { |change| say "gb`+ #{change}`" }
+        changes.modified.each { |change| say "bb`* #{change}`" }
+        changes.removed.each  { |change| say "rb`- #{change}`" }
       end
 
       def run_command(env = {})
