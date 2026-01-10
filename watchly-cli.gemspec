@@ -1,10 +1,10 @@
 lib = File.expand_path 'lib', __dir__
 $LOAD_PATH.unshift lib unless $LOAD_PATH.include? lib
-require 'watchly/version'
+require 'watchly/cli/version'
 
 Gem::Specification.new do |s|
   s.name        = 'watchly-cli'
-  s.version     = Watchly::VERSION
+  s.version     = Watchly::CLI::VERSION
   s.summary     = 'Lightweight, polling-based file system watcher CLI'
   s.description = [
     'A small polling-based executable that watches one or more glob patterns',
