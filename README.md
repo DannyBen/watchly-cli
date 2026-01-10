@@ -1,9 +1,14 @@
 # Watchly CLI
 
-[Watchly][watchly] is a lightweight, dependency-free, polling-based file watcher for Ruby.
-It watches one or more glob patterns and reports changes.
+`watchly` is a command-line tool that watches for file system changes and
+executes a command when changes are detected.
 
-This is its command line interface.
+It uses a polling-based approach rather than native file system events. This
+makes it reliable across environments where evented file watchers are
+unavailable or unreliable, including virtual machines, Vagrant setups, network
+file systems, containers, and remote or synced volumes.
+
+*`watcher-cli` is a thin wrapper around the [Watchly][watchly] Ruby gem.*
 
 ## Installation
 
