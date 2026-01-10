@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'colsole', '~> 1.0'
   s.add_dependency 'mister_bin', '~> 0.9'
-  s.add_dependency 'watchly', '~> 0.1.0'
+  s.add_dependency 'watchly', '~> 0.1.1'
 
   s.metadata = {
     'bug_tracker_uri'       => 'https://github.com/dannyben/watchly-cli/issues',
