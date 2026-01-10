@@ -8,7 +8,7 @@ makes it reliable across environments where evented file watchers are
 unavailable or unreliable, including virtual machines, Vagrant setups, network
 file systems, containers, and remote or synced volumes.
 
-*`watcher-cli` is a thin wrapper around the [Watchly][watchly] Ruby gem.*
+*`watchly-cli` is a thin wrapper around the [Watchly][watchly] Ruby gem.*
 
 ## Installation
 
