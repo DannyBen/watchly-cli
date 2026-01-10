@@ -1,0 +1,25 @@
+require 'debug' rescue nil
+
+title   'Watchly CLI Developer Toolbelt'
+summary 'Runfile tasks for building the Watchly CLI gem'
+
+import_gem 'runfile-tasks/gem'
+import 'debug'
+
+help 'Inject usage to README'
+action :usage do
+  readme = File.read 'README.md'
+  usage = `bundle exec watchly --help`
+  usage_markdown = <<~USAGE
+    <!-- START USAGE -->
+    ```console
+    $ watchly --help
+    #{usage}
+    ```
+    <!-- END USAGE -->
+  USAGE
+  
+  updated_readme = readme.gsub /<!-- START USAGE -->.*<!-- END USAGE -->/m, usage_markdown
+  File.write 'README.md', updated_readme
+  say 'README.md updated'
+end
