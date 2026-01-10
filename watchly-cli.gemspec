@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version     = Watchly::VERSION
   s.summary     = 'Lightweight, polling-based file system watcher CLI'
   s.description = [
-    'A small, dependency-free, polling-based executable that watches',
-    'one or more glob patterns and reports on change',
+    'A small polling-based executable that watches one or more glob patterns',
+    'and reports on change',
   ].join(' ')
   s.authors     = ['Danny Ben Shitrit']
   s.email       = 'db@dannyben.com'
