@@ -30,6 +30,12 @@ describe Watchly::CLI::Command do
     expect { subject.execute }.to output_approval('command/usage')
   end
 
+  it 'shows version' do
+    expect { subject.execute ['--version'] }
+      .to output("#{VERSION} (watchly #{Watchly::VERSION})\n")
+      .to_stdout
+  end
+
   it 'shows help' do
     expect { subject.execute ['--help'] }.to output_approval('command/help')
   end

@@ -8,22 +8,26 @@ changed files (see below).
 
 Usage:
   watchly COMMAND [options] [GLOB...]
+  watchly --version | --help
 
 Options:
-  -i, --interval N
+  -i --interval N
     Loop interval in seconds [default: 1]
 
-  -q, --quiet
+  -q --quiet
     Print less to screen
 
-  -e, --each
+  -e --each
     Run the command once per added or changed file
 
-  -m, --immediate
+  -m --immediate
     Execute the command before watching
 
   -h --help
     Show this help
+
+  --version
+    Show version number
 
 Parameters:
   COMMAND

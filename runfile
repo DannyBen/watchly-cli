@@ -4,7 +4,7 @@ title   'Watchly CLI Developer Toolbelt'
 summary 'Runfile tasks for building the Watchly CLI gem'
 
 import_gem 'runfile-tasks/gem'
-import 'debug'
+import 'debug'  # == debug.runfile
 
 help 'Inject usage to README'
 action :usage do

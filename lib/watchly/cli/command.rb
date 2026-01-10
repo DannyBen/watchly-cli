@@ -4,6 +4,7 @@ module Watchly
   module CLI
     class Command < MisterBin::Command
       summary 'watchly — run a command when files change'
+      version "#{VERSION} (watchly #{Watchly::VERSION})"
 
       help <<~HELP
         Watches files matching one or more glob patterns and runs a command when
@@ -14,14 +15,15 @@ module Watchly
       HELP
 
       usage 'watchly COMMAND [options] [GLOB...]'
+      usage 'watchly --version | --help'
 
       param 'COMMAND', 'Command to run on change'
       param 'GLOB', 'One or more glob patterns [default: *.*]'
 
-      option '-i, --interval N', 'Loop interval in seconds [default: 1]'
-      option '-q, --quiet', 'Print less to screen'
-      option '-e, --each', 'Run the command once per added or changed file'
-      option '-m, --immediate', 'Execute the command before watching'
+      option '-i --interval N', 'Loop interval in seconds [default: 1]'
+      option '-q --quiet', 'Print less to screen'
+      option '-e --each', 'Run the command once per added or changed file'
+      option '-m --immediate', 'Execute the command before watching'
 
       environment 'WATCHLY_FILES', 'Added and modified files, one per line'
       environment 'WATCHLY_ADDED', 'Added files, one per line'
