@@ -1,6 +1,6 @@
 # Watchly CLI
 
-![repocard](repocard.svg)
+![repocard](https://repocard.dannyben.com/svg/watchly-cli.svg)
 
 `watchly` is a command-line tool that watches for file system changes and
 executes a command when changes are detected.
